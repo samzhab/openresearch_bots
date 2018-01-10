@@ -6,6 +6,7 @@ GEM
     ast (2.3.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    csv (1.0.0)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     hashdiff (0.3.7)
@@ -54,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   addressable (~> 2.5.2)
+  csv
   json (~> 2.1.0)
   nokogiri
   rest-client

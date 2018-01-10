@@ -10,3 +10,4 @@ gem 'rubocop', '~> 0.51.0', require: false
 gem 'rest-client'
 gem 'webmock'
 gem 'nokogiri'
+gem 'csv'
