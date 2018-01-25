@@ -1,10 +1,5 @@
 #!/usr/bin/env ruby
-# require 'json'
-require 'addressable'
-require 'rest-client'
-require 'nokogiri'
-require 'csv'
-#
+
 # require 'webmock'
 # include WebMock::API
 #

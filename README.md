@@ -1,6 +1,6 @@
 ## bots for openresearch
 Task 1 - Retrieve CORE 2017 and 2018 ranking for event series from CORE potal
-* from within Openresearch generate a CSV with event series to get CORE ranking and place them into a folder csv_files (sample CSV included in project folder csv_files)
+* from within Openresearch generate a CSV with event series to get CORE ranking and place them into a 'csv_files' folder (sample CSV included in project 'csv_files' folder)
 
 setup usage with rvm and process event series:
 * create a gemset
