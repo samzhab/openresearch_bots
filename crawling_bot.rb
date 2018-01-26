@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
-
+# require 'json'
+require 'addressable'
+require 'rest-client'
+require 'nokogiri'
+require 'csv'
+#
 # require 'webmock'
 # include WebMock::API
 #
@@ -38,15 +43,14 @@ def start
       core18_fomred_url = core18_base + event_series + core18_trail
       core_2018_rank = crawl_core_17_ranking(core17_fomred_url)
       core_2017_rank = crawl_core_18_ranking(core18_fomred_url)
-      if core_2018_rank
+      if core_2017_rank
         puts core_2017_rank
-        puts core_2018_rank
+        # puts core_2018_rank
         puts '-/-/-//-/-/' + event_series
       end
       # do crawling for all csv files in folder here
     end
   end
-
 end
 
 def mock_crawl
@@ -74,7 +78,7 @@ def crawl_core_18_ranking(core18_fomred_url)
     doc = Nokogiri::HTML(response)
     rank_table = doc.at('table')
     if rank_table
-      # puts rank_table.search('td.nowrap').text.split(' ')[2]
+      puts rank_table.search('td.nowrap').text.split(' ')[2]
       core_2018_rank = rank_table.search('td.nowrap').text.split(' ')[2]
       # table tbody tr.evenrow td.nowrap
     end
@@ -105,13 +109,10 @@ def crawl_core_17_ranking(core17_fomred_url)
   end
   core_2017_rank
 end
-
 # mock_crawl
 start
-
 # ICPRAI
 # http://portal.core.edu.au/conf-ranks/1548/
 # http://portal.core.edu.au/conf-ranks/1548/
-
 # ICMLC
 # WWW
